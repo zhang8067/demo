@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
@@ -12,9 +13,10 @@ import lombok.experimental.Accessors;
  **/
 @Data
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = true)
 @TableName("tb_goods_file")
 public class GoodsFile extends Base{
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @TableId(value = "id")
     private Long  id;
     private Long  goodsId;       //商品id
     private String category;      //附件类别(main-主图,pic-普通图片)

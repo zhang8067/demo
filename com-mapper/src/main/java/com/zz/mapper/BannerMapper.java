@@ -1,6 +1,7 @@
 package com.zz.mapper;
 
 import com.zz.pojo.Banner;
+import com.zz.vo.BannerVO;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.BaseMapper;
 
@@ -13,6 +14,9 @@ import java.util.List;
 @Component
 public interface BannerMapper extends BaseMapper<Banner> {
 
-    //首页Banner列表
-    List <Banner> getBannerLists();
+    /**
+     * 查询banner列表
+     *
+     */
+    List <BannerVO> getBannerLists();
 }

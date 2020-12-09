@@ -1,11 +1,9 @@
 package com.zz.controller;
 
-import com.zz.pojo.Banner;
 import com.zz.service.BannerService;
 import com.zz.utils.JSONResult;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.zz.vo.BannerVO;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,15 +16,19 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("/banner")
+@AllArgsConstructor
 public class BannerController {
 
-    @Autowired
-    private BannerService bannerService;
+    private final BannerService bannerService;
 
-    //查询banner列表
+
+    /**
+     * 查询banner列表
+     *
+     */
     @GetMapping("/bannerLists")
     public JSONResult listBanner() {
-        List <Banner> banners = bannerService.getBannerList();
+        List <BannerVO> banners = bannerService.getBannerList();
         return JSONResult.ok(banners);
     }
 }

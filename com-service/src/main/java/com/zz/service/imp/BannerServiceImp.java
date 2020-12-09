@@ -1,9 +1,9 @@
 package com.zz.service.imp;
 
 import com.zz.mapper.BannerMapper;
-import com.zz.pojo.Banner;
 import com.zz.service.BannerService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.zz.vo.BannerVO;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,13 +13,17 @@ import java.util.List;
  * @Date 2020/12/7 21:15
  **/
 @Service
+@AllArgsConstructor
 public class BannerServiceImp implements BannerService {
 
-    @Autowired
+
     private BannerMapper bannerMapper;
 
-    //查询banner列表
-    public List <Banner> getBannerList() {
+    /**
+     * 查询banner列表
+     *
+     */
+    public List <BannerVO> getBannerList() {
         return bannerMapper.getBannerLists();
     }
 

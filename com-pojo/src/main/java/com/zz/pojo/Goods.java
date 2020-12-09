@@ -1,9 +1,9 @@
 package com.zz.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
@@ -12,11 +12,12 @@ import java.math.BigDecimal;
  * @Author zhangzhen
  * @Date 2020/12/7 19:43
  **/
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
 @TableName("tb_goods")
 public class Goods extends Base {
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @TableId(value = "id")
     private String id;                    //    id
     private String merchantId;          //   商户id
     private String shopId;                // 商铺id

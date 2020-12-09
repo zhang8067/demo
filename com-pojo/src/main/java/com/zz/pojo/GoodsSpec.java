@@ -1,9 +1,10 @@
 package com.zz.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
@@ -14,9 +15,10 @@ import java.math.BigDecimal;
  **/
 @Data
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = true)
 @TableName("tb_goods_spec")
 public class GoodsSpec extends Base{
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @TableId(value = "id")
     private Long  id;
     private Long  goodsId;               //商品id
     private String goodsSpec;            //商品规格

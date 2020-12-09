@@ -16,5 +16,5 @@ public interface GoodsService {
     GoodsDetailVo queryGoodsDetailsById(String goodsId);
 
     //查询热卖产品列表 pageNum 当前页 pageSize 页面大小 orderBy 排序字段 orderType 排序规则
-    PagedResult queryAllHotGoodsList(Integer pageNum,Integer pageSize,String orderBy,Integer orderType);
+    PagedResult queryAllHotGoodsList(Integer pageNum,Integer pageSize,String orderBy,String orderType);
 }

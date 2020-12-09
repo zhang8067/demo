@@ -1,6 +1,6 @@
 package com.zz.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("TB_BANNER")
 public class Banner extends Base {
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @TableId(value = "id")
     private Long id;
     private Long locationId;       //banner位置id（默认1 首页轮播）
     private String location;        //banner位置(默认首轮录播)

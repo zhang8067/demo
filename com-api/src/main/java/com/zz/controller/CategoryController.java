@@ -1,12 +1,9 @@
 package com.zz.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.zz.pojo.Category;
 import com.zz.service.CategoryService;
 import com.zz.utils.JSONResult;
 import com.zz.utils.PagedResult;
-import com.zz.vo.CategoryVO;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,12 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/category")
+@AllArgsConstructor
 public class CategoryController {
 
-    @Autowired
-    private CategoryService categoryService;
 
-    //查询首页种类列表
+    private final CategoryService categoryService;
+
+
+    /**
+     * 查询首页种类列表
+     *
+     * @param pageNum 当前页
+     * @param pageSize 页面大小
+     * */
     @GetMapping("/categoryLists")
     public JSONResult getCategoryLists(@RequestParam(defaultValue = "1") Integer pageNum,
                                        @RequestParam(defaultValue = "10") Integer pageSize){

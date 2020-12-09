@@ -6,7 +6,7 @@ import com.zz.mapper.CategoryMapper;
 import com.zz.service.CategoryService;
 import com.zz.utils.PagedResult;
 import com.zz.vo.CategoryVO;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,10 +16,11 @@ import java.util.List;
  * @Date 2020/12/7 21:14
  **/
 @Service
+@AllArgsConstructor
 public class CategoryServiceImp implements CategoryService {
 
-    @Autowired
-    private CategoryMapper categoryMapper;
+
+    private final CategoryMapper categoryMapper;
 
     //查询首页种类列表 pageNum 当前页 页面尺寸
     public PagedResult queryAllCategorys(Integer pageNum, Integer pageSize) {

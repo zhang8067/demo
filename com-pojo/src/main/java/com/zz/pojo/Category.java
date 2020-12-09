@@ -4,17 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
  * @Author zhangzhen
  * @Date 2020/12/7 19:43
  **/
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
 @TableName("tb_category")
 public class Category extends Base{
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @TableId(value = "id")
     private Long id;
     private String categoryNo;    //分类编号
     private String name;           //分类名称

@@ -1,10 +1,8 @@
 package com.zz.mapper;
 
 import com.zz.pojo.Goods;
-import com.zz.vo.CategoryVO;
 import com.zz.vo.GoodsDetailVo;
 import com.zz.vo.GoodsVO;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.BaseMapper;
@@ -28,5 +26,5 @@ public interface GoodsMapper extends BaseMapper<Goods> {
     GoodsDetailVo queryGoodsDetailsById(String goodsId);
 
     //查询热卖产品列表 pageNum 当前页 pageSize 页面大小 orderBy 排序字段 orderType 排序规则
-    List<GoodsVO> queryAllHotGoodsList(@Param("orderBy") String orderBy,@Param("orderType") Integer orderType);
+    List<GoodsVO> queryAllHotGoodsList(@Param("orderBy") String orderBy, @Param("orderType") String orderType);
 }

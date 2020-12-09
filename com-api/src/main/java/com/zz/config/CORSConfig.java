@@ -10,6 +10,7 @@ import org.springframework.web.filter.CorsFilter;
  * @Author zhangzhen
  * @Date 2020/12/8 9:39
  **/
+
 @Configuration
 public class CORSConfig {
     @Bean
