@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,9 +21,11 @@ import java.util.List;
 public class GoodsController {
     @Autowired
     private GoodsService goodsService;
+
     @Autowired
     GoodsFileService goodsFileService;
 
+    //查询首页热销商品 pageNum 当前页 pageSize 页面大小
     @GetMapping("/hotLists")
     public JSONResult getAllHotGoods(@RequestParam(defaultValue = "1") Integer pageNum,
                                        @RequestParam(defaultValue = "2") Integer pageSize){
@@ -32,6 +33,7 @@ public class GoodsController {
         return JSONResult.ok(pagedResult);
     }
 
+    //查询首页畅销商品 pageNum 当前页 pageSize 页面大小
     @GetMapping("/bestLists")
     public JSONResult queryAllBestGoods(@RequestParam(defaultValue = "1") Integer pageNum,
                                      @RequestParam(defaultValue = "2") Integer pageSize){
@@ -39,6 +41,7 @@ public class GoodsController {
         return JSONResult.ok(pagedResult);
     }
 
+    //查询商品详情 goodsId 商品id
     @GetMapping("/goodsDetails/{goodsId}")
     @Transactional
     public JSONResult queryGoodsDetailsById(@PathVariable String goodsId){
@@ -48,16 +51,13 @@ public class GoodsController {
         return JSONResult.ok(goodsDetailVo);
     }
 
+    //查询热卖产品列表 pageNum 当前页 pageSize 页面大小 orderBy 排序字段 orderType 排序规则
     @GetMapping("/queryHotLists")
     public JSONResult queryAllHotGoods(@RequestParam(defaultValue = "1") Integer pageNum,
                                        @RequestParam(defaultValue = "6") Integer pageSize,
                                        @RequestParam( defaultValue = "g.price")String orderBy,
-                                       @RequestParam(defaultValue = "1")  Integer orderType
+                                       @RequestParam(defaultValue = "desc")  Integer orderType
                                        ){
-        if(orderType == 1){
-        }
-        if (orderType == 2){
-        }
         PagedResult pagedResult = goodsService.queryAllHotGoodsList(pageNum,pageSize,orderBy,orderType);
         return JSONResult.ok(pagedResult);
     }

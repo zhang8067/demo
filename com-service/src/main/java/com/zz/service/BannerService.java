@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface BannerService {
 
+    //查询banner列表
     List <Banner> getBannerList();
 }

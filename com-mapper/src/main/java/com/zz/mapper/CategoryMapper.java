@@ -11,5 +11,6 @@ import java.util.List;
  * @Date 2020/12/7 20:57
  **/
 public interface CategoryMapper extends BaseMapper<Category> {
+    //查询首页分类列表
     List<CategoryVO> queryAllCategorys();
 }

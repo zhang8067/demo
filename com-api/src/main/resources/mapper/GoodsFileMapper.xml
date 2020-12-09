@@ -3,7 +3,9 @@
 <mapper namespace="com.zz.mapper.GoodsFileMapper">
     <select id="queryFileById" resultType="com.zz.vo.GoodsFileVO">
         SELECT
-        url,category,type
+        url,
+        category,
+        type
         FROM
         tb_goods_file
         WHERE DEL_FLAG = 0

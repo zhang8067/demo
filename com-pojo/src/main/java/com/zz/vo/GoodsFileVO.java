@@ -12,7 +12,5 @@ import java.io.Serializable;
 @Data
 @Accessors(chain = true)
 public class GoodsFileVO implements Serializable {
-    private String type;
     private String url;
-
 }

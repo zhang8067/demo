@@ -22,6 +22,8 @@ public class BannerController {
 
     @Autowired
     private BannerService bannerService;
+
+    //查询banner列表
     @GetMapping("/bannerLists")
     public JSONResult listBanner() {
         List <Banner> banners = bannerService.getBannerList();

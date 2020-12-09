@@ -22,6 +22,8 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
+
+    //查询首页种类列表
     @GetMapping("/categoryLists")
     public JSONResult getCategoryLists(@RequestParam(defaultValue = "1") Integer pageNum,
                                        @RequestParam(defaultValue = "10") Integer pageSize){

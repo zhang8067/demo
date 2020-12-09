@@ -17,8 +17,11 @@ import java.util.List;
  **/
 @Service
 public class CategoryServiceImp implements CategoryService {
+
     @Autowired
     private CategoryMapper categoryMapper;
+
+    //查询首页种类列表 pageNum 当前页 页面尺寸
     public PagedResult queryAllCategorys(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum,pageSize);
        List<CategoryVO> results = categoryMapper.queryAllCategorys();

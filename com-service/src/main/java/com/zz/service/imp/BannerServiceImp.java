@@ -14,14 +14,13 @@ import java.util.List;
  **/
 @Service
 public class BannerServiceImp implements BannerService {
+
     @Autowired
     private BannerMapper bannerMapper;
 
+    //查询banner列表
     public List <Banner> getBannerList() {
         return bannerMapper.getBannerLists();
     }
 
-    public List<Banner> getBannerLists() {
-        return bannerMapper.selectAll();
-    }
 }

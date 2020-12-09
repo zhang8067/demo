@@ -10,5 +10,7 @@ import java.util.List;
  * @Date 2020/12/7 20:57
  **/
 public interface GoodsFileMapper extends BaseMapper<GoodsFile> {
+
+   //通过goodsId获得附件信息
     List<GoodsFile> queryFileById(String goodsId);
 }

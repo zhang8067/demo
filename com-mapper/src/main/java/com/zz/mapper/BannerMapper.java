@@ -12,5 +12,7 @@ import java.util.List;
  **/
 @Component
 public interface BannerMapper extends BaseMapper<Banner> {
+
+    //首页Banner列表
     List <Banner> getBannerLists();
 }

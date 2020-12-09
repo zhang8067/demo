@@ -15,8 +15,11 @@ import java.util.List;
  **/
 @Service
 public class GoodsFileServiceImp implements GoodsFileService {
+
     @Autowired
     private GoodsFileMapper goodsFileMapper;
+
+    //通过goodsId获得附件
     public List<GoodsFile> queryFileById(String goodsId) {
         return goodsFileMapper.queryFileById(goodsId);
     }

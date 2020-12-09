@@ -1,9 +1,11 @@
 package com.zz.vo;
 
+import com.zz.pojo.GoodsFile;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Author zhangzhen
@@ -17,4 +19,5 @@ public class BannerVO  implements Serializable {
     private String name;            //banner名称
     private String location;        //banner位置(默认首轮录播)
     private String picture;         //banner图片地址
+
 }

@@ -25,6 +25,7 @@ public class GoodsServiceImp implements GoodsService {
     @Autowired
     private GoodsMapper goodsMapper;
 
+    //查询首页热销商品 pageNum 当前页 pageSize 页面大小
     public PagedResult queryAllHotGoods(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum,pageSize);
         List<GoodsVO> results = goodsMapper.queryAllHotGoods();
@@ -32,6 +33,7 @@ public class GoodsServiceImp implements GoodsService {
         return new PagedResult(pageNum,pageList.getPages(),pageList.getTotal(),pageList.getList());
     }
 
+    //查询首页畅销商品 pageNum 当前页 pageSize 页面大小
     public PagedResult queryAllBestGoods(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum,pageSize);
         List<GoodsVO> results = goodsMapper.queryAllBestGoods();
@@ -39,10 +41,12 @@ public class GoodsServiceImp implements GoodsService {
         return new PagedResult(pageNum,pageList.getPages(),pageList.getTotal(),pageList.getList());
     }
 
+    //查询商品详情 goodsId 商品id
     public GoodsDetailVo queryGoodsDetailsById(String goodsId) {
         return goodsMapper.queryGoodsDetailsById(goodsId);
     }
 
+    //查询热卖产品列表 pageNum 当前页 pageSize 页面大小 orderBy 排序字段 orderType 排序规则
     public PagedResult queryAllHotGoodsList(Integer pageNum, Integer pageSize,String orderBy,Integer orderType) {
         PageHelper.startPage(pageNum,pageSize);
         List<GoodsVO> results = goodsMapper.queryAllHotGoodsList(orderBy,orderType);

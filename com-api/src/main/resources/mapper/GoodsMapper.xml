@@ -51,14 +51,17 @@
         WHERE g.`state`=1 AND g.id=#{id}
     </select>
 
-    <select id="queryAllHotGoodsList" resultType="com.zz.vo.GoodsDetailVo">
+    <select id="queryAllHotGoodsList" resultType="com.zz.vo.GoodsVO">
         SELECT
-           g.id
+           g.id,
+           g.picture,
+            g.price,
+             g.goods_name
          FROM
          tb_goods g
         LEFT JOIN tb_goods_spec gs ON g.`id` = gs.`goods_id`
         WHERE g.`state`=1 AND g.`del_flag`= 0
-         ORDER BY ${orderBy} ${orderType}
+         ORDER BY ${orderBy}
 
     </select>
 </mapper>
