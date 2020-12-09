@@ -1,0 +1,5 @@
+com\zz\controller\CategoryController.class
+com\zz\App.class
+com\zz\config\CORSConfig.class
+com\zz\controller\BannerController.class
+com\zz\controller\GoodsController.class

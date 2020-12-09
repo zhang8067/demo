@@ -1,0 +1,6 @@
+com\zz\service\BannerService.class
+com\zz\service\imp\BannerServiceImp.class
+com\zz\service\imp\GoodsServiceImp.class
+com\zz\service\CategoryService.class
+com\zz\service\GoodsService.class
+com\zz\service\imp\CategoryServiceImp.class
