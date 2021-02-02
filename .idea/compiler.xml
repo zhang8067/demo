@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
         <module name="com-mapper" />
-        <module name="com-common" />
-        <module name="com-service" />
         <module name="com-pojo" />
+        <module name="spider" />
+        <module name="com-common" />
         <module name="com-api" />
+        <module name="com-service" />
       </profile>
     </annotationProcessing>
   </component>

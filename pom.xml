@@ -14,6 +14,8 @@
         <module>com-pojo</module>
         <module>com-service</module>
         <module>com-api</module>
+        <module>spider</module>
+        <module>demo</module>
     </modules>
 
     <properties>
