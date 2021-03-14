@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,11 +10,14 @@
         <module name="demo" />
         <module name="com-mapper" />
         <module name="com-pojo" />
-        <module name="spider" />
-        <module name="com-common" />
         <module name="com-api" />
+        <module name="spider" />
+        <module name="设计模式" />
+        <module name="JUC" />
         <module name="com-service" />
+        <module name="com-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

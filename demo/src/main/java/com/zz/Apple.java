@@ -53,4 +53,14 @@ public class Apple {
 
     public Apple() {
     }
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", money=" + money +
+                ", num=" + num +
+                '}';
+    }
 }
